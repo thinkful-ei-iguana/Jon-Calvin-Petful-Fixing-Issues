@@ -5,7 +5,12 @@ const port = 8080;
 const peopleList = require("../Data/People-Data");
 
 peopleExpress.get("/", (req, res, next) => {
-  res.json(peopleList);
+  return res.json(peopleList);
+});
+
+peopleExpress.delete("/", (req, res, next) => {
+  peopleList.dequeue();
+  return res.status(204).json(peopleList.first);
 });
 
 peopleExpress;

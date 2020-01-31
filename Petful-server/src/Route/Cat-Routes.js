@@ -12,7 +12,7 @@ catExpress.get("/", (req, res, next) => {
   }
 });
 
-catRouter.delete("/remove", (req, res, next) => {
+catExpress.delete("/remove", (req, res, next) => {
   catList.dequeue();
   return res.status(204).json(catList.first);
 });
