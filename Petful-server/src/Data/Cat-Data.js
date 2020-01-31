@@ -1,34 +1,13 @@
 const catList = [
   {
-    name: "",
-    Breed: "",
-    Age: "",
-    Sex: "",
-    Description: ".",
-    Story: "."
+    name: "Kitty 1",
+    breed: "homeless cat",
+    age: "69",
+    sex: "F",
+    description: "this is one cool cat!",
+    story: "she's got a story!"
   },
-  {
-    name: "",
-    Breed: "",
-    Age: "",
-    Sex: "",
-    Description: "",
-    Story: ""
-  },
-  {
-    name: "",
-    Breed: "",
-    Age: "",
-    Sex: "",
-    Description: ".",
-    Story: ""
-  },
-  {
-    name: "",
-    Breed: "",
-    Age: "",
-    Sex: "",
-    Description: "",
-    Story: "."
-  }
+  
 ];
+
+module.exports = catList;
