@@ -1,19 +1,23 @@
 const peopleList = [
     {
-      name: '',
-      age: ''
+      name: 'Bethany',
+      age: '3000'
     },
     {
-      name: '',
-      age: ''
+      name: 'Calvin',
+      age: '30'
     },
     {
-      name: '',
-      age: ''
+      name: 'Mandee',
+      age: '28'
     },
     {
-      name: '',
-      age: ''
+      name: 'David',
+      age: '27'
+    }
+    {
+      name: 'Skyler',
+      age: '50000'
     }
   ];
   
