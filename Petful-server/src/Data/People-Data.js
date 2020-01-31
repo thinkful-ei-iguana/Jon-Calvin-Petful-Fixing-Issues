@@ -1,31 +1,24 @@
 const peopleList = [
-    {
-      name: 'Bethany',
-      age: '3000'
-    },
-    {
-      name: 'Calvin',
-      age: '30'
-    },
-    {
-      name: 'Mandee',
-      age: '28'
-    },
-    {
-      name: 'David',
-      age: '27'
-    }
-    {
-      name: 'Skyler',
-      age: '50000'
-    }
-  ];
-  
-  const express = require('express');
-  const peopleRouter = express.Router();
-  
-  peopleRouter.get('/new-person', (req, res, next) => {
-  
-      let newPerson = 
-      return res.json(newPerson)
-  })
+  {
+    name: "Bethany",
+    age: "1"
+  },
+  {
+    name: "Calvin",
+    age: "2"
+  },
+  {
+    name: "Mandee",
+    age: "3"
+  },
+  {
+    name: "David",
+    age: "4"
+  },
+  {
+    name: "Skyler",
+    age: "5"
+  }
+];
+
+module.exports = peopleList;

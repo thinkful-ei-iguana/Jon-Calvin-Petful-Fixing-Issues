@@ -1,7 +1,8 @@
-const express = require('express');
-const cors = require('cors');
-const dogExpress = require('./Route/Dog-Routes');
-const catExpress = require('./Route/Cat-Routes');
+const express = require("express");
+const cors = require("cors");
+const dogExpress = require("./Route/Dog-Routes");
+const catExpress = require("./Route/Cat-Routes");
+const peopleExpress = require("./Route/Person-Route");
 // const peopleExpress = require('./Route/Cat-Routes');
 
 const app = express();
@@ -13,26 +14,34 @@ app.use(function(error, req, res, next) {
   res.status(error.status || 500);
   res.json({
     message: error.message,
-    error: app.get('env') === 'development' ? error : {}
-  })
+    error: app.get("env") === "development" ? error : {}
+  });
 });
 
 //testing to see if this is connected
-app.get('/', (req,res) => {
-  res.send('hi there!');
+app.get("/", (req, res) => {
+  res.send("hi there!");
 });
 
 // app.get('/api/dog', (req,res) => {
 //   res.send('hi dog!');
 // });
 
-app.use('/api/dog', dogExpress);
-app.use('/api/cat', catExpress);
-// app.use('/api/people', peopleExpress);
+app.use("/api/dog", dogExpress);
+app.use("/api/cat", catExpress);
+app.use("/api/person", peopleExpress);
 
+// const express = require('express');
+// const peopleRouter = express.Router();
+
+// peopleRouter.get('/new-person', (req, res, next) => {
+
+//     let newPerson =
+//     return res.json(newPerson)
+// })
 
 app.listen(8080, () => {
-  console.log('Serving on 8080');
+  console.log("Serving on 8080");
 });
 
 module.exports = app;

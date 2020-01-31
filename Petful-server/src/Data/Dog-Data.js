@@ -1,5 +1,9 @@
 const dogList = [
   {
+    imageURL:
+      "http://www.dogster.com/wp-content/uploads/2015/05/Cute%20dog%20listening%20to%20music%201_1.jpg",
+    imageDescription:
+      "A smiling golden-brown golden retreiver listening to music.",
     name: "Winniefred",
     breed: "Rottweiler",
     age: 5,
@@ -10,6 +14,10 @@ const dogList = [
       "She's a half pure bred Rottweiler on her mothers side, and a half pure-bred German Shepard on her fathers side. She was brought in to be adopted because her family could not keep her due to neighbor complaints about their horses, even though she had done nothing wrong! She would love any kind and cuddly family no matter the size or other pets. She gets along with everyone!"
   },
   {
+    imageURL:
+      "http://www.dogster.com/wp-content/uploads/2015/05/Cute%20dog%20listening%20to%20music%201_1.jpg",
+    imageDescription:
+      "A smiling golden-brown golden retreiver listening to music.",
     name: "Eve",
     breed: "Rottweiler",
     age: 3,
@@ -20,6 +28,10 @@ const dogList = [
       "An accident at a breeding company left this beautiful sweet puppy on our laps and we would love for her to find a happy and caring home. She likes sleeping next to someone in a bed, she's house trained, all you need to do is show her once where she needs to go and she'll take care of it from there. She's very quiet and doesn't bark unless spooked."
   },
   {
+    imageURL:
+      "http://www.dogster.com/wp-content/uploads/2015/05/Cute%20dog%20listening%20to%20music%201_1.jpg",
+    imageDescription:
+      "A smiling golden-brown golden retreiver listening to music.",
     name: "Carrou",
     breed: "Newfoundland",
     age: 11,
@@ -32,4 +44,3 @@ const dogList = [
 ];
 
 module.exports = dogList;
-
