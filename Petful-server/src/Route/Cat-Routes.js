@@ -14,9 +14,7 @@ catExpress.get("/", (req, res, next) => {
 
 catExpress.delete("/remove", (req, res, next) => {
   catList.dequeue();
-  return res.status(204).json(catList.first);
+  return res.status(200).json(catList.first.value);
 });
-
-catExpress;
 
 module.exports = catExpress;

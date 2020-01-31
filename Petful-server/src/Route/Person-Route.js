@@ -5,14 +5,12 @@ const port = 8080;
 const peopleList = require("../Data/People-Data");
 
 peopleExpress.get("/", (req, res, next) => {
-  return res.json(peopleList);
+  return res.json(peopleList.first.value);
 });
 
 peopleExpress.delete("/", (req, res, next) => {
   peopleList.dequeue();
-  return res.status(204).json(peopleList.first);
+  return res.status(200).json(peopleList.first.value);
 });
-
-peopleExpress;
 
 module.exports = peopleExpress;
