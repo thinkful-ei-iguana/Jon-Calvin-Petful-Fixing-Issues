@@ -12,7 +12,7 @@ dogExpress.get("/", (req, res, next) => {
 
 dogExpress.delete("/remove", (req, res, next) => {
   dogList.dequeue();
-  return res.status(204).json(dogList.first);
+  return res.status(200).json(dogList.first);
 });
 
 module.exports = dogExpress;
