@@ -1,16 +1,18 @@
 const express = require("express");
-const app = express();
 const peopleExpress = express.Router();
-const port = 8080;
 const peopleList = require("../Data/People-Data");
 
 peopleExpress.get("/", (req, res, next) => {
-  return res.json(peopleList.first.value);
+  if (peopleList.first === null)
+    res.status(404).send("Sorry, no more people available");
+  else {
+    return res.json(peopleList.first.value);
+  }
 });
 
-peopleExpress.delete("/", (req, res, next) => {
+peopleExpress.delete("/remove", (req, res, next) => {
   peopleList.dequeue();
-  return res.status(200).json(peopleList.first.value);
+  return res.status(204).json(peopleList.first);
 });
 
 module.exports = peopleExpress;

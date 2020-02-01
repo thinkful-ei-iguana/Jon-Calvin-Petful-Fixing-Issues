@@ -1,7 +1,5 @@
 const express = require("express");
-const app = express();
 const catExpress = express.Router();
-const port = 8080;
 const catList = require("../Data/Cat-Data");
 
 catExpress.get("/", (req, res, next) => {
@@ -14,7 +12,7 @@ catExpress.get("/", (req, res, next) => {
 
 catExpress.delete("/remove", (req, res, next) => {
   catList.dequeue();
-  return res.status(200).json(catList.first.value);
+  return res.status(204).json(catList.first);
 });
 
 module.exports = catExpress;

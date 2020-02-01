@@ -3,13 +3,12 @@ const cors = require("cors");
 const dogExpress = require("./Route/Dog-Routes");
 const catExpress = require("./Route/Cat-Routes");
 const peopleExpress = require("./Route/Person-Route");
-// const peopleExpress = require('./Route/Cat-Routes');
 
 const app = express();
 app.use(cors());
 app.use(express());
 
-// Catch-all 404
+// Catch-all 500
 app.use(function(error, req, res, next) {
   res.status(error.status || 500);
   res.json({
@@ -23,22 +22,16 @@ app.get("/", (req, res) => {
   res.send("hi there!");
 });
 
-// app.get('/api/dog', (req,res) => {
-//   res.send('hi dog!');
-// });
-
 app.use("/api/dog", dogExpress);
 app.use("/api/cat", catExpress);
-app.use("/api/person", peopleExpress);
+app.use("/api/people", peopleExpress);
 
-// const express = require('express');
-// const peopleRouter = express.Router();
-
-// peopleRouter.get('/new-person', (req, res, next) => {
-
-//     let newPerson =
-//     return res.json(newPerson)
-// })
+// Catch-all 404
+app.use(function(req, res, next) {
+  const err = new Error("Not Found");
+  err.status = 404;
+  next(err);
+});
 
 app.listen(8080, () => {
   console.log("Serving on 8080");
