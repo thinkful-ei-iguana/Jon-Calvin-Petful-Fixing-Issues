@@ -20,7 +20,7 @@ dogList.enqueue({
 dogList.enqueue({
   id: 2,
   imageURL:
-    'http://www.dogster.com/wp-content/uploads/2015/05/Cute%20dog%20listening%20to%20music%201_1.jpg',
+    'https://barkpost.com/wp-content/uploads/2015/06/sandyxoxkerry-600x600.jpg',
   imageDescription:
     'A smiling golden-brown golden retreiver listening to music.',
   name: 'Eve',
@@ -35,7 +35,7 @@ dogList.enqueue({
 dogList.enqueue({
   id: 3,
   imageURL:
-    'http://www.dogster.com/wp-content/uploads/2015/05/Cute%20dog%20listening%20to%20music%201_1.jpg',
+    'https://i.ytimg.com/vi/sROV_Iw5grQ/hqdefault.jpg',
   imageDescription:
     'A smiling golden-brown golden retreiver listening to music.',
   name: 'Carrou',
