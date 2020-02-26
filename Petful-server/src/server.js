@@ -36,8 +36,8 @@ app.use(function(req, res, next) {
   err.status = 404;
   next(err);
 });
-
-app.listen(8080, () => {
+const port = process.env.PORT || 8080
+app.listen(port, () => {
   console.log('Serving on 8080');
 });
 
