@@ -5,10 +5,10 @@
   "keywords": [],
   "author": "Alex Cumbo",
   "license": "UNLICENSED",
-  "main": "./Petful-server/src/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon ./src/server.js"
+    "start": "node ./Petful-server/src/server.js",
+    "dev": "nodemon ./Petful-server/src/server.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
