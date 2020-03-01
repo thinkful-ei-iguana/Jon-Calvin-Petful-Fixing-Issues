@@ -1,4 +1,4 @@
-const Queue = require('../Queue');
+const Queue = require('../queue');
 
 let catList = new Queue();
 
