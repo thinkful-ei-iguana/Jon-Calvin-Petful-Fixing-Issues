@@ -1,4 +1,4 @@
-const Queue = require("../Queue");
+const Queue = require("../queue");
 
 let peopleList = new Queue();
 

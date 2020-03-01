@@ -13,17 +13,19 @@ app.use(cors());
 app.use(express());
 
 // Catch-all 500
-app.use(function(error, req, res, next) {
-  res.status(error.status || 500);
-  res.json({
-    message: error.message,
-    error: app.get('env') === 'development' ? error : {}
-  });
-});
+app.use((error, req, res, next) => {
+  let response
+  if (process.env.NODE_ENV === 'production') {
+    response = { error: { message: 'server error' } }
+  } else {
+    response = { error }
+  }
+  res.status(500).json(response)
+})
 
 //testing to see if this is connected
 app.get('/', (req, res) => {
-  res.send('hi there!');
+  res.send('Hello, world!');
 });
 
 app.use('/api/dog', dogExpress);
@@ -31,13 +33,13 @@ app.use('/api/cat', catExpress);
 app.use('/api/people', peopleExpress);
 
 // Catch-all 404
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   const err = new Error('Not Found');
   err.status = 404;
   next(err);
 });
-
-app.listen(8080, () => {
+const port = process.env.PORT || 8080
+app.listen(port, () => {
   console.log('Serving on 8080');
 });
 

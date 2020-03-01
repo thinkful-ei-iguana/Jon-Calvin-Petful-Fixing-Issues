@@ -3,12 +3,15 @@
   "version": "1.0.0",
   "description": "",
   "keywords": [],
+  "engines": {
+    "node": "10.11.0"
+  },
   "author": "Alex Cumbo",
   "license": "UNLICENSED",
-  "main": "./Petful-server/src/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon ./src/server.js"
+    "start": "nodemon ./Petful-server/src/server.js",
+    "deploy": "git push heroku master"
   },
   "dependencies": {
     "cors": "^2.8.5",

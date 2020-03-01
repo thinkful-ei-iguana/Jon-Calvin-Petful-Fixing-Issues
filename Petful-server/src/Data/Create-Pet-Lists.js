@@ -1,7 +1,7 @@
 const catList = require("./Cat-Data");
 const dogList = require("./Dog-Data");
 const peopleList = require("./People-Data");
-const Queue = require("../Queue");
+const Queue = require("../queue");
 
 const instantiateLists = () => ({
   adoptACatList,
