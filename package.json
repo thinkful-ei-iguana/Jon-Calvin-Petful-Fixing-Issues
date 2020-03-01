@@ -11,7 +11,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./Petful-server/src/server.js",
-    "dev": "nodemon ./Petful-server/src/server.js"
+    "dev": "nodemon ./Petful-server/src/server.js",
+    "deploy": "git push heroku master"
   },
   "dependencies": {
     "cors": "^2.8.5",
